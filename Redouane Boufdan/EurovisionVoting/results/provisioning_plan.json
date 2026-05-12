@@ -1,0 +1,68 @@
+{
+  "step": "Step 2 Provisioning VMs: Proxmox + AWS Instance with HashiCorp Terraform",
+  "mode": "simulation for local classroom run",
+  "terraform_files": [
+    "infrastructure/aws_ec2.tf",
+    "infrastructure/proxmox_vm.tf",
+    "infrastructure/variables.tf"
+  ],
+  "generated_at": "2026-05-12T10:28:21",
+  "vms": [
+    {
+      "datacenter": "dc-west",
+      "provider": "Proxmox",
+      "region": "Belgium",
+      "vm_name": "eurovision-dc-west",
+      "cpu": 2,
+      "memory_mb": 4096,
+      "disk_gb": 30,
+      "services": [
+        "vote-generator",
+        "streaming-storage",
+        "map-reducer"
+      ]
+    },
+    {
+      "datacenter": "dc-north",
+      "provider": "Proxmox",
+      "region": "Nordics",
+      "vm_name": "eurovision-dc-north",
+      "cpu": 2,
+      "memory_mb": 4096,
+      "disk_gb": 30,
+      "services": [
+        "vote-generator",
+        "streaming-storage",
+        "map-reducer"
+      ]
+    },
+    {
+      "datacenter": "dc-central",
+      "provider": "AWS",
+      "region": "eu-central-1",
+      "vm_name": "eurovision-dc-central",
+      "cpu": 2,
+      "memory_mb": 4096,
+      "disk_gb": 30,
+      "services": [
+        "vote-generator",
+        "streaming-storage",
+        "map-reducer"
+      ]
+    },
+    {
+      "datacenter": "dc-south",
+      "provider": "AWS",
+      "region": "eu-west-3",
+      "vm_name": "eurovision-dc-south",
+      "cpu": 2,
+      "memory_mb": 4096,
+      "disk_gb": 30,
+      "services": [
+        "vote-generator",
+        "streaming-storage",
+        "map-reducer"
+      ]
+    }
+  ]
+}

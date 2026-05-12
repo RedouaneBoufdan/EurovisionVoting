@@ -1,0 +1,14 @@
+{
+  "step": "Step 1 Preparation",
+  "status": "ready",
+  "songs_loaded": 20,
+  "datacenters": [
+    "dc-west",
+    "dc-north",
+    "dc-central",
+    "dc-south"
+  ],
+  "data_dir": "/app/data",
+  "results_dir": "/app/results",
+  "log_dir": "/app/logs"
+}

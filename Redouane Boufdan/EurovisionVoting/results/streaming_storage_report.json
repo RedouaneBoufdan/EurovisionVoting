@@ -1,0 +1,8 @@
+{
+  "step": "Step 3B Streaming and Storage",
+  "status": "ready",
+  "stream_file": "/app/results/votes_stream.csv",
+  "storage_file": "/app/results/votes_storage.csv",
+  "generated_at": "2026-05-12T10:28:21",
+  "explanation": "votes_stream.csv simulates an incoming stream; votes_storage.csv simulates persisted storage."
+}
