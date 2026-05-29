@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eurovision Distributed Voting</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">🌍</div>
+      <div>
+        <h1>Eurovision Voting</h1>
+        <p>Docker datacenter demo</p>
+      </div>
+    </div>
+
+    <nav>
+      <button class="nav active" data-page="home">Home</button>
+      <button class="nav" data-page="test">Start test</button>
+      <button class="nav" data-page="live">Live dashboard</button>
+      <button class="nav" data-page="raw">Raw CSV votes</button>
+      <button class="nav" data-page="datacenters">Datacenters</button>
+      <button class="nav" data-page="docker">Docker info</button>
+      <button class="nav" data-page="presentation">Presentation text</button>
+    </nav>
+
+    <div class="side-card">
+      <span class="label">Entry URL</span>
+      <strong>localhost:8501</strong>
+      <small>One website. No separate Streamlit links.</small>
+    </div>
+
+    <div class="side-card">
+      <span class="label">Refresh mode</span>
+      <strong>Partial update</strong>
+      <small>The page does not F5 reload. Only stats/charts update via JavaScript fetch.</small>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2 id="pageTitle">Home</h2>
+        <p id="pageSubtitle">Distributed Eurovision voting with up to 20 Docker country datacenters.</p>
+      </div>
+      <div class="top-actions">
+        <span id="connectionBadge" class="badge warn">Connecting...</span>
+        <button id="refreshBtn" class="ghost">Update stats</button>
+      </div>
+    </header>
+
+    <section id="home" class="page active">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Teacher requirement</p>
+          <h3>Multiple datacenters, fully Docker-based</h3>
+          <p>
+            This version runs one central aggregator and up to 20 separate country datacenter containers.
+            For a safe demo you can select only 3 to 5 datacenters, but the full Docker setup is ready for all 20.
+          </p>
+          <div class="hero-actions">
+            <button class="primary" data-go="test">Start a test</button>
+            <button class="secondary" data-go="live">Open live dashboard</button>
+            <button class="secondary" data-go="datacenters">View datacenters</button>
+          </div>
+        </div>
+        <div class="flow">
+          <div class="node">20x country datacenters</div>
+          <div class="node">BE / FR / DE / IT / ES ...</div>
+          <div class="arrow">→</div>
+          <div class="node central">Central Aggregator</div>
+          <div class="arrow">→</div>
+          <div class="node dashboard">Dashboard</div>
+        </div>
+      </div>
+
+      <div class="grid kpis">
+        <article class="card"><span>Total received votes</span><strong id="homeTotal">0</strong></article>
+        <article class="card"><span>Active datacenters</span><strong id="homeActive">0</strong></article>
+        <article class="card"><span>Current winner</span><strong id="homeWinner">-</strong></article>
+        <article class="card"><span>Last update</span><strong id="homeUpdated">-</strong></article>
+      </div>
+
+      <section class="card">
+        <h3>Current architecture</h3>
+        <p>
+          Each selected country datacenter runs as its own Docker container and generates votes independently.
+          The central aggregator receives all events, stores the raw CSV votes, and the dashboard updates through API calls without a full page reload.
+        </p>
+      </section>
+    </section>
+
+    <section id="test" class="page">
+      <div class="grid two">
+        <section class="card">
+          <h3>Run a live voting test</h3>
+          <p>Choose the total number of votes, the duration and the Eurovision countries/songs that participate. You need at least 2 countries.</p>
+
+          <label class="form-row">
+            <span>Total votes</span>
+            <input id="testVotes" type="number" min="10" step="100" value="12000" />
+          </label>
+          <label class="form-row">
+            <span>Duration in seconds</span>
+            <input id="testDuration" type="number" min="5" step="5" value="120" />
+          </label>
+
+          <div class="form-row">
+            <span>Datacenters to operate</span>
+            <div class="mini-actions">
+              <button id="selectAllDatacenters" class="ghost small">Select all 20</button>
+              <button id="clearDatacenters" class="ghost small">Clear</button>
+            </div>
+            <small class="hint">Tip: use 3-5 for a smooth classroom demo. Select all 20 only to prove the full scale setup.</small>
+            <div id="datacenterChecks" class="check-grid datacenters"></div>
+          </div>
+
+          <div class="form-row">
+            <span>Participating Eurovision countries/songs</span>
+            <div class="mini-actions">
+              <button id="selectAllSongs" class="ghost small">Select all</button>
+              <button id="clearSongs" class="ghost small">Clear</button>
+            </div>
+            <div id="songChecks" class="check-grid songs"></div>
+          </div>
+
+          <div class="hero-actions">
+            <button id="startTestBtn" class="primary">Start test</button>
+            <button id="resetBtn" class="secondary">Reset results</button>
+          </div>
+          <p id="testMessage" class="message"></p>
+        </section>
+
+        <section class="card">
+          <h3>How the test works</h3>
+          <p>
+            The dashboard sends one command to the central aggregator. The central aggregator resets the CSV files and starts the selected Docker datacenter workers.
+          </p>
+          <ol>
+            <li>Each selected datacenter receives its part of the total votes.</li>
+            <li>The worker sends votes gradually during the selected duration.</li>
+            <li>The central aggregator stores raw votes in CSV and updates the global ranking.</li>
+          </ol>
+          <pre><code>Browser → central-aggregator:8501
+central-aggregator → selected dc-* workers:9000/start
+workers → central-aggregator:8501/api/votes
+Browser only opens → localhost:8501</code></pre>
+        </section>
+      </div>
+    </section>
+
+    <section id="live" class="page">
+      <section class="card subtle">
+        <strong>Important:</strong> Datacenter country means where the votes are processed. Top countries means the Eurovision songs receiving votes.
+      </section>
+
+      <div class="grid kpis">
+        <article class="card"><span>Total received votes</span><strong id="totalVotes">0</strong></article>
+        <article class="card"><span>Active datacenters</span><strong id="activeDatacenters">0</strong></article>
+        <article class="card"><span>Winner</span><strong id="winner">-</strong></article>
+        <article class="card"><span>Updated</span><strong id="updatedAt">-</strong></article>
+      </div>
+
+      <div class="grid two">
+        <section class="card">
+          <div class="card-title"><h3>Votes by datacenter</h3><span>live</span></div>
+          <canvas id="dcChart" width="760" height="320"></canvas>
+        </section>
+        <section class="card">
+          <div class="card-title"><h3>Top countries</h3><span>global</span></div>
+          <canvas id="songChart" width="760" height="320"></canvas>
+        </section>
+      </div>
+
+      <div class="grid two">
+        <section class="card">
+          <h3>Global ranking</h3>
+          <div class="table-wrap"><table id="rankingTable"></table></div>
+        </section>
+        <section class="card">
+          <h3>Recent incoming events</h3>
+          <div id="recentEvents" class="events"></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="raw" class="page">
+      <section class="card">
+        <div class="card-title"><h3>Raw incoming votes / CSV view</h3><span>live raw data</span></div>
+        <p>This page shows the raw vote events stored by the central aggregator. It is useful to prove that the dashboard is based on real event data.</p>
+        <div class="hero-actions">
+          <button id="refreshRawBtn" class="secondary">Update raw votes</button>
+          <a class="primary linkbtn" href="/api/votes.csv" target="_blank">Download CSV</a>
+        </div>
+        <div class="table-wrap raw-wrap"><table id="rawTable"></table></div>
+      </section>
+    </section>
+
+    <section id="datacenters" class="page">
+      <section class="card">
+        <h3>Datacenter services</h3>
+        <p>Each row represents a separate Docker container. This is the part you show to prove the distributed setup.</p>
+        <div class="table-wrap"><table id="dcTable"></table></div>
+      </section>
+
+      <div class="grid three" id="dcCards"></div>
+    </section>
+
+    <section id="docker" class="page">
+      <section class="card">
+        <h3>How to start the project</h3>
+        <p>Run these commands from the project folder.</p>
+        <pre><code>docker compose down --remove-orphans
+docker compose up --build</code></pre>
+        <p>Then open:</p>
+        <pre><code>http://localhost:8501</code></pre>
+      </section>
+
+      <section class="card">
+        <h3>Useful commands to operate the system</h3>
+        <div class="grid two codegrid">
+          <pre><code>docker compose ps</code></pre>
+          <pre><code>docker compose logs -f central-aggregator</code></pre>
+          <pre><code>docker compose logs -f dc-belgium</code></pre>
+          <pre><code>docker compose logs -f dc-france</code></pre>
+          <pre><code>docker compose logs -f dc-germany</code></pre>
+          <pre><code>docker compose logs -f dc-italy</code></pre>
+        </div>
+        <p>You can replace <code>dc-belgium</code> with any country service, for example <code>dc-spain</code>, <code>dc-netherlands</code>, <code>dc-ukraine</code> or <code>dc-estonia</code>.</p>
+        <p>Stop everything cleanly:</p>
+        <pre><code>docker compose down</code></pre>
+      </section>
+
+      <section class="card">
+        <h3>Docker network explanation</h3>
+        <p>
+          In Docker, the browser uses <strong>localhost:8501</strong>. The containers communicate internally with service names.
+          <strong>central-aggregator</strong> is internal Docker DNS, so you should not open it directly in the browser.
+          Datacenter workers use URLs like <strong>dc-belgium:9000</strong>, <strong>dc-france:9000</strong> and <strong>dc-germany:9000</strong> inside the Docker network.
+        </p>
+      </section>
+    </section>
+
+    <section id="presentation" class="page">
+      <section class="card">
+        <h3>Short explanation</h3>
+        <p class="speech">
+          We changed the project into a Docker-based distributed architecture. The system has one central aggregator container and up to 20 country datacenter containers.
+          Each country datacenter can run as its own Docker service. For the demo, I can start only 3 to 5 selected datacenters to keep the laptop stable, but the project is prepared to operate all 20.
+          Each datacenter generates local vote events and sends them in batches to the central aggregator. The central aggregator stores all incoming votes in CSV, calculates the results per datacenter, and builds the global Eurovision ranking.
+          The dashboard is a single web interface. It updates the charts and statistics through API calls, so the full page does not reload.
+        </p>
+      </section>
+
+      <section class="card">
+        <h3>What to show during the demo</h3>
+        <ol>
+          <li>Start Docker with <code>docker compose up --build</code>.</li>
+          <li>Open <code>localhost:8501</code>.</li>
+          <li>Go to <strong>Start test</strong>, choose votes, duration and at least two countries.</li>
+          <li>Show the <strong>Live dashboard</strong> and incoming votes.</li>
+          <li>Show <strong>Raw CSV votes</strong> to prove that real event rows are being stored.</li>
+          <li>Run <code>docker compose ps</code> or logs to show the country datacenter containers.</li>
+          <li>If asked, select all 20 datacenters in <strong>Start test</strong> to prove the full country-per-datacenter setup.</li>
+        </ol>
+      </section>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

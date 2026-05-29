@@ -1,0 +1,255 @@
+services:
+  central-aggregator:
+    build: .
+    container_name: eurovision20-central-aggregator
+    command: ["python", "central_aggregator.py"]
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./results:/app/results
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8501/health').read()"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  dc-sweden:
+    build: .
+    container_name: eurovision20-dc-sweden
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-sweden
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-france:
+    build: .
+    container_name: eurovision20-dc-france
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-france
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-italy:
+    build: .
+    container_name: eurovision20-dc-italy
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-italy
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-spain:
+    build: .
+    container_name: eurovision20-dc-spain
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-spain
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-germany:
+    build: .
+    container_name: eurovision20-dc-germany
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-germany
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-belgium:
+    build: .
+    container_name: eurovision20-dc-belgium
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-belgium
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-netherlands:
+    build: .
+    container_name: eurovision20-dc-netherlands
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-netherlands
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-norway:
+    build: .
+    container_name: eurovision20-dc-norway
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-norway
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-denmark:
+    build: .
+    container_name: eurovision20-dc-denmark
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-denmark
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-finland:
+    build: .
+    container_name: eurovision20-dc-finland
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-finland
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-portugal:
+    build: .
+    container_name: eurovision20-dc-portugal
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-portugal
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-greece:
+    build: .
+    container_name: eurovision20-dc-greece
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-greece
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-poland:
+    build: .
+    container_name: eurovision20-dc-poland
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-poland
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-ukraine:
+    build: .
+    container_name: eurovision20-dc-ukraine
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-ukraine
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-united-kingdom:
+    build: .
+    container_name: eurovision20-dc-united-kingdom
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-united-kingdom
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-switzerland:
+    build: .
+    container_name: eurovision20-dc-switzerland
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-switzerland
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-austria:
+    build: .
+    container_name: eurovision20-dc-austria
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-austria
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-ireland:
+    build: .
+    container_name: eurovision20-dc-ireland
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-ireland
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-czechia:
+    build: .
+    container_name: eurovision20-dc-czechia
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-czechia
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy
+
+  dc-estonia:
+    build: .
+    container_name: eurovision20-dc-estonia
+    command: ["python", "datacenter_worker.py", "--serve"]
+    environment:
+      - DATACENTER=dc-estonia
+      - CENTRAL_URL=http://central-aggregator:8501
+      - WORKER_PORT=9000
+    depends_on:
+      central-aggregator:
+        condition: service_healthy

@@ -1,0 +1,2 @@
+# No external Python packages are required for the new Docker version.
+# The dashboard is plain HTML/CSS/JavaScript and the backend uses Python standard library.

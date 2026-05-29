@@ -1,0 +1,21 @@
+datacenter,display_name,country,country_code,provider,region,container,description,votes,top_country,top_flag,top_votes
+dc-sweden,Sweden Datacenter,Sweden,SE,Nordic Docker VM,Stockholm / Sweden,eurovision20-dc-sweden,Handles Sweden incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-france,France Datacenter,France,FR,Western Europe Docker VM,Paris / France,eurovision20-dc-france,Handles France incoming votes and sends vote batches to the central aggregator.,1667,Italy,🇮🇹,484
+dc-italy,Italy Datacenter,Italy,IT,Southern Europe Docker VM,Milan / Italy,eurovision20-dc-italy,Handles Italy incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-spain,Spain Datacenter,Spain,ES,Southern Europe Docker VM,Madrid / Spain,eurovision20-dc-spain,Handles Spain incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-germany,Germany Datacenter,Germany,DE,Central Europe Docker VM,Frankfurt / Germany,eurovision20-dc-germany,Handles Germany incoming votes and sends vote batches to the central aggregator.,1667,Belgium,🇧🇪,622
+dc-belgium,Belgium Datacenter,Belgium,BE,Western Europe Docker VM,Brussels / Belgium,eurovision20-dc-belgium,Handles Belgium incoming votes and sends vote batches to the central aggregator.,1666,Germany,🇩🇪,560
+dc-netherlands,Netherlands Datacenter,Netherlands,NL,Western Europe Docker VM,Amsterdam / Netherlands,eurovision20-dc-netherlands,Handles Netherlands incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-norway,Norway Datacenter,Norway,NO,Nordic Docker VM,Oslo / Norway,eurovision20-dc-norway,Handles Norway incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-denmark,Denmark Datacenter,Denmark,DK,Nordic Docker VM,Copenhagen / Denmark,eurovision20-dc-denmark,Handles Denmark incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-finland,Finland Datacenter,Finland,FI,Nordic Docker VM,Helsinki / Finland,eurovision20-dc-finland,Handles Finland incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-portugal,Portugal Datacenter,Portugal,PT,Southern Europe Docker VM,Lisbon / Portugal,eurovision20-dc-portugal,Handles Portugal incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-greece,Greece Datacenter,Greece,GR,Southern Europe Docker VM,Athens / Greece,eurovision20-dc-greece,Handles Greece incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-poland,Poland Datacenter,Poland,PL,Central Europe Docker VM,Warsaw / Poland,eurovision20-dc-poland,Handles Poland incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-ukraine,Ukraine Datacenter,Ukraine,UA,Eastern Europe Docker VM,Kyiv / Ukraine,eurovision20-dc-ukraine,Handles Ukraine incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-united-kingdom,United Kingdom Datacenter,United Kingdom,GB,Western Europe Docker VM,London / United Kingdom,eurovision20-dc-united-kingdom,Handles United Kingdom incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-switzerland,Switzerland Datacenter,Switzerland,CH,Central Europe Docker VM,Zurich / Switzerland,eurovision20-dc-switzerland,Handles Switzerland incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-austria,Austria Datacenter,Austria,AT,Central Europe Docker VM,Vienna / Austria,eurovision20-dc-austria,Handles Austria incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-ireland,Ireland Datacenter,Ireland,IE,Western Europe Docker VM,Dublin / Ireland,eurovision20-dc-ireland,Handles Ireland incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-czechia,Czechia Datacenter,Czechia,CZ,Central Europe Docker VM,Prague / Czechia,eurovision20-dc-czechia,Handles Czechia incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-estonia,Estonia Datacenter,Estonia,EE,Northern Europe Docker VM,Tallinn / Estonia,eurovision20-dc-estonia,Handles Estonia incoming votes and sends vote batches to the central aggregator.,0,-,,0
