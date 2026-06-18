@@ -23,19 +23,12 @@
       <button class="nav" data-page="raw">Raw CSV votes</button>
       <button class="nav" data-page="datacenters">Datacenters</button>
       <button class="nav" data-page="docker">Docker info</button>
-      <button class="nav" data-page="presentation">Presentation text</button>
     </nav>
 
     <div class="side-card">
       <span class="label">Entry URL</span>
       <strong>localhost:8501</strong>
       <small>One website. No separate Streamlit links.</small>
-    </div>
-
-    <div class="side-card">
-      <span class="label">Refresh mode</span>
-      <strong>Partial update</strong>
-      <small>The page does not F5 reload. Only stats/charts update via JavaScript fetch.</small>
     </div>
   </aside>
 
@@ -242,32 +235,6 @@ docker compose up --build</code></pre>
         </p>
       </section>
     </section>
-
-    <section id="presentation" class="page">
-      <section class="card">
-        <h3>Short explanation</h3>
-        <p class="speech">
-          We changed the project into a Docker-based distributed architecture. The system has one central aggregator container and up to 20 country datacenter containers.
-          Each country datacenter can run as its own Docker service. For the demo, I can start only 3 to 5 selected datacenters to keep the laptop stable, but the project is prepared to operate all 20.
-          Each datacenter generates local vote events and sends them in batches to the central aggregator. The central aggregator stores all incoming votes in CSV, calculates the results per datacenter, and builds the global Eurovision ranking.
-          The dashboard is a single web interface. It updates the charts and statistics through API calls, so the full page does not reload.
-        </p>
-      </section>
-
-      <section class="card">
-        <h3>What to show during the demo</h3>
-        <ol>
-          <li>Start Docker with <code>docker compose up --build</code>.</li>
-          <li>Open <code>localhost:8501</code>.</li>
-          <li>Go to <strong>Start test</strong>, choose votes, duration and at least two countries.</li>
-          <li>Show the <strong>Live dashboard</strong> and incoming votes.</li>
-          <li>Show <strong>Raw CSV votes</strong> to prove that real event rows are being stored.</li>
-          <li>Run <code>docker compose ps</code> or logs to show the country datacenter containers.</li>
-          <li>If asked, select all 20 datacenters in <strong>Start test</strong> to prove the full country-per-datacenter setup.</li>
-        </ol>
-      </section>
-    </section>
-  </main>
 
   <script src="/app.js"></script>
 </body>

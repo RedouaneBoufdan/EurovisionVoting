@@ -1,10 +1,10 @@
 datacenter,display_name,country,country_code,provider,region,container,description,votes,top_country,top_flag,top_votes
-dc-sweden,Sweden Datacenter,Sweden,SE,Nordic Docker VM,Stockholm / Sweden,eurovision20-dc-sweden,Handles Sweden incoming votes and sends vote batches to the central aggregator.,0,-,,0
-dc-france,France Datacenter,France,FR,Western Europe Docker VM,Paris / France,eurovision20-dc-france,Handles France incoming votes and sends vote batches to the central aggregator.,1667,Italy,🇮🇹,484
-dc-italy,Italy Datacenter,Italy,IT,Southern Europe Docker VM,Milan / Italy,eurovision20-dc-italy,Handles Italy incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-sweden,Sweden Datacenter,Sweden,SE,Nordic Docker VM,Stockholm / Sweden,eurovision20-dc-sweden,Handles Sweden incoming votes and sends vote batches to the central aggregator.,167,Italy,🇮🇹,92
+dc-france,France Datacenter,France,FR,Western Europe Docker VM,Paris / France,eurovision20-dc-france,Handles France incoming votes and sends vote batches to the central aggregator.,167,Italy,🇮🇹,131
+dc-italy,Italy Datacenter,Italy,IT,Southern Europe Docker VM,Milan / Italy,eurovision20-dc-italy,Handles Italy incoming votes and sends vote batches to the central aggregator.,166,France,🇫🇷,115
 dc-spain,Spain Datacenter,Spain,ES,Southern Europe Docker VM,Madrid / Spain,eurovision20-dc-spain,Handles Spain incoming votes and sends vote batches to the central aggregator.,0,-,,0
-dc-germany,Germany Datacenter,Germany,DE,Central Europe Docker VM,Frankfurt / Germany,eurovision20-dc-germany,Handles Germany incoming votes and sends vote batches to the central aggregator.,1667,Belgium,🇧🇪,622
-dc-belgium,Belgium Datacenter,Belgium,BE,Western Europe Docker VM,Brussels / Belgium,eurovision20-dc-belgium,Handles Belgium incoming votes and sends vote batches to the central aggregator.,1666,Germany,🇩🇪,560
+dc-germany,Germany Datacenter,Germany,DE,Central Europe Docker VM,Frankfurt / Germany,eurovision20-dc-germany,Handles Germany incoming votes and sends vote batches to the central aggregator.,0,-,,0
+dc-belgium,Belgium Datacenter,Belgium,BE,Western Europe Docker VM,Brussels / Belgium,eurovision20-dc-belgium,Handles Belgium incoming votes and sends vote batches to the central aggregator.,0,-,,0
 dc-netherlands,Netherlands Datacenter,Netherlands,NL,Western Europe Docker VM,Amsterdam / Netherlands,eurovision20-dc-netherlands,Handles Netherlands incoming votes and sends vote batches to the central aggregator.,0,-,,0
 dc-norway,Norway Datacenter,Norway,NO,Nordic Docker VM,Oslo / Norway,eurovision20-dc-norway,Handles Norway incoming votes and sends vote batches to the central aggregator.,0,-,,0
 dc-denmark,Denmark Datacenter,Denmark,DK,Nordic Docker VM,Copenhagen / Denmark,eurovision20-dc-denmark,Handles Denmark incoming votes and sends vote batches to the central aggregator.,0,-,,0

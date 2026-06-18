@@ -7,7 +7,6 @@ const titles = {
   raw: ['Raw CSV votes', 'All incoming vote events stored by the central aggregator.'],
   datacenters: ['Datacenters', 'One Docker service per country/datacenter. Select only what you need for the demo.'],
   docker: ['Docker info', 'Commands and network explanation for the demo.'],
-  presentation: ['Presentation text', 'Simple explanation you can say to the teacher.']
 };
 
 function fmt(n) { return Number(n || 0).toLocaleString('en-US'); }

@@ -1,8 +1,8 @@
 {
   "service": "central-aggregator-web",
-  "started_at": "2026-05-29T20:22:22",
-  "updated_at": "2026-05-29T20:22:52",
-  "total_votes": 5000,
+  "started_at": "2026-06-18T21:47:40",
+  "updated_at": "2026-06-18T21:47:49",
+  "total_votes": 500,
   "active_datacenters": 3,
   "datacenters": [
     {
@@ -14,10 +14,10 @@
       "region": "Stockholm / Sweden",
       "container": "eurovision20-dc-sweden",
       "description": "Handles Sweden incoming votes and sends vote batches to the central aggregator.",
-      "votes": 0,
-      "top_country": "-",
-      "top_flag": "",
-      "top_votes": 0
+      "votes": 167,
+      "top_country": "Italy",
+      "top_flag": "\ud83c\uddee\ud83c\uddf9",
+      "top_votes": 92
     },
     {
       "datacenter": "dc-france",
@@ -28,10 +28,10 @@
       "region": "Paris / France",
       "container": "eurovision20-dc-france",
       "description": "Handles France incoming votes and sends vote batches to the central aggregator.",
-      "votes": 1667,
+      "votes": 167,
       "top_country": "Italy",
       "top_flag": "\ud83c\uddee\ud83c\uddf9",
-      "top_votes": 484
+      "top_votes": 131
     },
     {
       "datacenter": "dc-italy",
@@ -42,10 +42,10 @@
       "region": "Milan / Italy",
       "container": "eurovision20-dc-italy",
       "description": "Handles Italy incoming votes and sends vote batches to the central aggregator.",
-      "votes": 0,
-      "top_country": "-",
-      "top_flag": "",
-      "top_votes": 0
+      "votes": 166,
+      "top_country": "France",
+      "top_flag": "\ud83c\uddeb\ud83c\uddf7",
+      "top_votes": 115
     },
     {
       "datacenter": "dc-spain",
@@ -70,10 +70,10 @@
       "region": "Frankfurt / Germany",
       "container": "eurovision20-dc-germany",
       "description": "Handles Germany incoming votes and sends vote batches to the central aggregator.",
-      "votes": 1667,
-      "top_country": "Belgium",
-      "top_flag": "\ud83c\udde7\ud83c\uddea",
-      "top_votes": 622
+      "votes": 0,
+      "top_country": "-",
+      "top_flag": "",
+      "top_votes": 0
     },
     {
       "datacenter": "dc-belgium",
@@ -84,10 +84,10 @@
       "region": "Brussels / Belgium",
       "container": "eurovision20-dc-belgium",
       "description": "Handles Belgium incoming votes and sends vote batches to the central aggregator.",
-      "votes": 1666,
-      "top_country": "Germany",
-      "top_flag": "\ud83c\udde9\ud83c\uddea",
-      "top_votes": 560
+      "votes": 0,
+      "top_country": "-",
+      "top_flag": "",
+      "top_votes": 0
     },
     {
       "datacenter": "dc-netherlands",
@@ -289,338 +289,317 @@
   "workers": [
     {
       "worker": "worker-dc-france",
-      "votes": 1667
+      "votes": 167
     },
     {
-      "worker": "worker-dc-germany",
-      "votes": 1667
+      "worker": "worker-dc-sweden",
+      "votes": 167
     },
     {
-      "worker": "worker-dc-belgium",
-      "votes": 1666
+      "worker": "worker-dc-italy",
+      "votes": 166
     }
   ],
   "global_results": [
     {
       "rank": 1,
-      "song_id": 6,
-      "country": "Belgium",
-      "flag": "\ud83c\udde7\ud83c\uddea",
-      "total_votes": 1030
-    },
-    {
-      "rank": 2,
       "song_id": 3,
       "country": "Italy",
       "flag": "\ud83c\uddee\ud83c\uddf9",
-      "total_votes": 976
+      "total_votes": 223
     },
     {
-      "rank": 3,
+      "rank": 2,
       "song_id": 2,
       "country": "France",
       "flag": "\ud83c\uddeb\ud83c\uddf7",
-      "total_votes": 837
+      "total_votes": 190
     },
     {
-      "rank": 4,
-      "song_id": 5,
-      "country": "Germany",
-      "flag": "\ud83c\udde9\ud83c\uddea",
-      "total_votes": 749
-    },
-    {
-      "rank": 5,
+      "rank": 3,
       "song_id": 1,
       "country": "Sweden",
       "flag": "\ud83c\uddf8\ud83c\uddea",
-      "total_votes": 718
-    },
-    {
-      "rank": 6,
-      "song_id": 4,
-      "country": "Spain",
-      "flag": "\ud83c\uddea\ud83c\uddf8",
-      "total_votes": 690
+      "total_votes": 87
     }
   ],
   "winner": {
     "rank": 1,
-    "song_id": 6,
-    "country": "Belgium",
-    "flag": "\ud83c\udde7\ud83c\uddea",
-    "total_votes": 1030
+    "song_id": 3,
+    "country": "Italy",
+    "flag": "\ud83c\uddee\ud83c\uddf9",
+    "total_votes": 223
   },
   "recent_events": [
     {
-      "event_id": "dc-belgium-EVT-1780086172-000001666",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 5,
-      "song_country": "Germany",
-      "flag": "\ud83c\udde9\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:52"
+      "event_id": "dc-italy-EVT-1781819269-000000166",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 1,
+      "song_country": "Sweden",
+      "flag": "\ud83c\uddf8\ud83c\uddea",
+      "timestamp": "2026-06-18T21:47:49"
     },
     {
-      "event_id": "dc-germany-EVT-1780086172-000001667",
-      "from_country_code": "DE",
-      "datacenter": "dc-germany",
-      "song_id": 6,
-      "song_country": "Belgium",
-      "flag": "\ud83c\udde7\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:52"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086172-000001667",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 4,
-      "song_country": "Spain",
-      "flag": "\ud83c\uddea\ud83c\uddf8",
-      "timestamp": "2026-05-29T20:22:52"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086171-000001665",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
+      "event_id": "dc-sweden-EVT-1781819269-000000167",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
       "song_id": 3,
       "song_country": "Italy",
       "flag": "\ud83c\uddee\ud83c\uddf9",
-      "timestamp": "2026-05-29T20:22:51"
+      "timestamp": "2026-06-18T21:47:49"
     },
     {
-      "event_id": "dc-germany-EVT-1780086171-000001666",
-      "from_country_code": "DE",
-      "datacenter": "dc-germany",
-      "song_id": 2,
-      "song_country": "France",
-      "flag": "\ud83c\uddeb\ud83c\uddf7",
-      "timestamp": "2026-05-29T20:22:51"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086171-000001666",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 1,
-      "song_country": "Sweden",
-      "flag": "\ud83c\uddf8\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:51"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086170-000001664",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 2,
-      "song_country": "France",
-      "flag": "\ud83c\uddeb\ud83c\uddf7",
-      "timestamp": "2026-05-29T20:22:50"
-    },
-    {
-      "event_id": "dc-germany-EVT-1780086170-000001665",
-      "from_country_code": "DE",
-      "datacenter": "dc-germany",
-      "song_id": 1,
-      "song_country": "Sweden",
-      "flag": "\ud83c\uddf8\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:50"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086170-000001665",
+      "event_id": "dc-france-EVT-1781819269-000000167",
       "from_country_code": "FR",
       "datacenter": "dc-france",
       "song_id": 3,
       "song_country": "Italy",
       "flag": "\ud83c\uddee\ud83c\uddf9",
-      "timestamp": "2026-05-29T20:22:50"
+      "timestamp": "2026-06-18T21:47:49"
     },
     {
-      "event_id": "dc-belgium-EVT-1780086169-000001663",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 4,
-      "song_country": "Spain",
-      "flag": "\ud83c\uddea\ud83c\uddf8",
-      "timestamp": "2026-05-29T20:22:49"
-    },
-    {
-      "event_id": "dc-germany-EVT-1780086169-000001664",
-      "from_country_code": "DE",
-      "datacenter": "dc-germany",
+      "event_id": "dc-italy-EVT-1781819268-000000165",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
       "song_id": 1,
       "song_country": "Sweden",
       "flag": "\ud83c\uddf8\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:49"
+      "timestamp": "2026-06-18T21:47:48"
     },
     {
-      "event_id": "dc-france-EVT-1780086169-000001664",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 5,
-      "song_country": "Germany",
-      "flag": "\ud83c\udde9\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:49"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086168-000001662",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 2,
-      "song_country": "France",
-      "flag": "\ud83c\uddeb\ud83c\uddf7",
-      "timestamp": "2026-05-29T20:22:48"
-    },
-    {
-      "event_id": "dc-germany-EVT-1780086168-000001663",
-      "from_country_code": "DE",
-      "datacenter": "dc-germany",
-      "song_id": 2,
-      "song_country": "France",
-      "flag": "\ud83c\uddeb\ud83c\uddf7",
-      "timestamp": "2026-05-29T20:22:48"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086168-000001663",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 6,
-      "song_country": "Belgium",
-      "flag": "\ud83c\udde7\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:48"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001661",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 2,
-      "song_country": "France",
-      "flag": "\ud83c\uddeb\ud83c\uddf7",
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001660",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 2,
-      "song_country": "France",
-      "flag": "\ud83c\uddeb\ud83c\uddf7",
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001659",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 4,
-      "song_country": "Spain",
-      "flag": "\ud83c\uddea\ud83c\uddf8",
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001658",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 5,
-      "song_country": "Germany",
-      "flag": "\ud83c\udde9\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001657",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
+      "event_id": "dc-sweden-EVT-1781819268-000000166",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
       "song_id": 3,
       "song_country": "Italy",
       "flag": "\ud83c\uddee\ud83c\uddf9",
-      "timestamp": "2026-05-29T20:22:47"
+      "timestamp": "2026-06-18T21:47:48"
     },
     {
-      "event_id": "dc-belgium-EVT-1780086167-000001656",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 2,
-      "song_country": "France",
-      "flag": "\ud83c\uddeb\ud83c\uddf7",
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001655",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 5,
-      "song_country": "Germany",
-      "flag": "\ud83c\udde9\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001654",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 5,
-      "song_country": "Germany",
-      "flag": "\ud83c\udde9\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-germany-EVT-1780086167-000001662",
-      "from_country_code": "DE",
-      "datacenter": "dc-germany",
-      "song_id": 1,
-      "song_country": "Sweden",
-      "flag": "\ud83c\uddf8\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086167-000001662",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 5,
-      "song_country": "Germany",
-      "flag": "\ud83c\udde9\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086167-000001661",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 5,
-      "song_country": "Germany",
-      "flag": "\ud83c\udde9\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086167-000001660",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 6,
-      "song_country": "Belgium",
-      "flag": "\ud83c\udde7\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086167-000001659",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 6,
-      "song_country": "Belgium",
-      "flag": "\ud83c\udde7\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086167-000001658",
+      "event_id": "dc-france-EVT-1781819268-000000166",
       "from_country_code": "FR",
       "datacenter": "dc-france",
       "song_id": 3,
       "song_country": "Italy",
       "flag": "\ud83c\uddee\ud83c\uddf9",
-      "timestamp": "2026-05-29T20:22:47"
+      "timestamp": "2026-06-18T21:47:48"
     },
     {
-      "event_id": "dc-france-EVT-1780086167-000001657",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 5,
-      "song_country": "Germany",
-      "flag": "\ud83c\udde9\ud83c\uddea",
-      "timestamp": "2026-05-29T20:22:47"
+      "event_id": "dc-italy-EVT-1781819267-000000164",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 1,
+      "song_country": "Sweden",
+      "flag": "\ud83c\uddf8\ud83c\uddea",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000163",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 1,
+      "song_country": "Sweden",
+      "flag": "\ud83c\uddf8\ud83c\uddea",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000162",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000161",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000160",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 1,
+      "song_country": "Sweden",
+      "flag": "\ud83c\uddf8\ud83c\uddea",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000159",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000158",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000157",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000156",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000155",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 1,
+      "song_country": "Sweden",
+      "flag": "\ud83c\uddf8\ud83c\uddea",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000154",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000153",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000152",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000151",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000150",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000149",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000148",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-sweden-EVT-1781819267-000000165",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
+      "song_id": 3,
+      "song_country": "Italy",
+      "flag": "\ud83c\uddee\ud83c\uddf9",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-sweden-EVT-1781819267-000000164",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-sweden-EVT-1781819267-000000163",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
+      "song_id": 3,
+      "song_country": "Italy",
+      "flag": "\ud83c\uddee\ud83c\uddf9",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-sweden-EVT-1781819267-000000162",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-sweden-EVT-1781819267-000000161",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-sweden-EVT-1781819267-000000160",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
+      "song_id": 2,
+      "song_country": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-sweden-EVT-1781819267-000000159",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
+      "song_id": 3,
+      "song_country": "Italy",
+      "flag": "\ud83c\uddee\ud83c\uddf9",
+      "timestamp": "2026-06-18T21:47:47"
     }
   ],
   "available_songs": [
@@ -727,204 +706,204 @@
   ],
   "raw_votes_preview": [
     {
-      "event_id": "dc-belgium-EVT-1780086172-000001666",
-      "phone_number": "+32628304945",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 5,
-      "timestamp": "2026-05-29T20:22:52"
+      "event_id": "dc-italy-EVT-1781819269-000000166",
+      "phone_number": "+39401482027",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 1,
+      "timestamp": "2026-06-18T21:47:49"
     },
     {
-      "event_id": "dc-germany-EVT-1780086172-000001667",
-      "phone_number": "+49484431936",
-      "from_country_code": "DE",
-      "datacenter": "dc-germany",
-      "song_id": 6,
-      "timestamp": "2026-05-29T20:22:52"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086172-000001667",
-      "phone_number": "+33279401514",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 4,
-      "timestamp": "2026-05-29T20:22:52"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086171-000001665",
-      "phone_number": "+32935024274",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
+      "event_id": "dc-sweden-EVT-1781819269-000000167",
+      "phone_number": "+46350200146",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
       "song_id": 3,
-      "timestamp": "2026-05-29T20:22:51"
+      "timestamp": "2026-06-18T21:47:49"
     },
     {
-      "event_id": "dc-germany-EVT-1780086171-000001666",
-      "phone_number": "+49790525677",
-      "from_country_code": "DE",
-      "datacenter": "dc-germany",
-      "song_id": 2,
-      "timestamp": "2026-05-29T20:22:51"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086171-000001666",
-      "phone_number": "+33880410548",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 1,
-      "timestamp": "2026-05-29T20:22:51"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086170-000001664",
-      "phone_number": "+32698809657",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 2,
-      "timestamp": "2026-05-29T20:22:50"
-    },
-    {
-      "event_id": "dc-germany-EVT-1780086170-000001665",
-      "phone_number": "+49554176702",
-      "from_country_code": "DE",
-      "datacenter": "dc-germany",
-      "song_id": 1,
-      "timestamp": "2026-05-29T20:22:50"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086170-000001665",
-      "phone_number": "+33936635028",
+      "event_id": "dc-france-EVT-1781819269-000000167",
+      "phone_number": "+33287175237",
       "from_country_code": "FR",
       "datacenter": "dc-france",
       "song_id": 3,
-      "timestamp": "2026-05-29T20:22:50"
+      "timestamp": "2026-06-18T21:47:49"
     },
     {
-      "event_id": "dc-belgium-EVT-1780086169-000001663",
-      "phone_number": "+32492120860",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 4,
-      "timestamp": "2026-05-29T20:22:49"
-    },
-    {
-      "event_id": "dc-germany-EVT-1780086169-000001664",
-      "phone_number": "+49358730083",
-      "from_country_code": "DE",
-      "datacenter": "dc-germany",
+      "event_id": "dc-italy-EVT-1781819268-000000165",
+      "phone_number": "+39824123554",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
       "song_id": 1,
-      "timestamp": "2026-05-29T20:22:49"
+      "timestamp": "2026-06-18T21:47:48"
     },
     {
-      "event_id": "dc-france-EVT-1780086169-000001664",
-      "phone_number": "+33582677722",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 5,
-      "timestamp": "2026-05-29T20:22:49"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086168-000001662",
-      "phone_number": "+32346946691",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 2,
-      "timestamp": "2026-05-29T20:22:48"
-    },
-    {
-      "event_id": "dc-germany-EVT-1780086168-000001663",
-      "phone_number": "+49215784101",
-      "from_country_code": "DE",
-      "datacenter": "dc-germany",
-      "song_id": 2,
-      "timestamp": "2026-05-29T20:22:48"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086168-000001663",
-      "phone_number": "+33583503426",
-      "from_country_code": "FR",
-      "datacenter": "dc-france",
-      "song_id": 6,
-      "timestamp": "2026-05-29T20:22:48"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001661",
-      "phone_number": "+32899706994",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 2,
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001660",
-      "phone_number": "+32197885993",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 2,
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001659",
-      "phone_number": "+32272915670",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 4,
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001658",
-      "phone_number": "+32401064071",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 5,
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001657",
-      "phone_number": "+32433569515",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
+      "event_id": "dc-sweden-EVT-1781819268-000000166",
+      "phone_number": "+46533766780",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
       "song_id": 3,
-      "timestamp": "2026-05-29T20:22:47"
+      "timestamp": "2026-06-18T21:47:48"
     },
     {
-      "event_id": "dc-belgium-EVT-1780086167-000001656",
-      "phone_number": "+32164777964",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 2,
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001655",
-      "phone_number": "+32619933285",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 5,
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-belgium-EVT-1780086167-000001654",
-      "phone_number": "+32855526766",
-      "from_country_code": "BE",
-      "datacenter": "dc-belgium",
-      "song_id": 5,
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-germany-EVT-1780086167-000001662",
-      "phone_number": "+49262940455",
-      "from_country_code": "DE",
-      "datacenter": "dc-germany",
-      "song_id": 1,
-      "timestamp": "2026-05-29T20:22:47"
-    },
-    {
-      "event_id": "dc-france-EVT-1780086167-000001662",
-      "phone_number": "+33675066360",
+      "event_id": "dc-france-EVT-1781819268-000000166",
+      "phone_number": "+33280733662",
       "from_country_code": "FR",
       "datacenter": "dc-france",
-      "song_id": 5,
-      "timestamp": "2026-05-29T20:22:47"
+      "song_id": 3,
+      "timestamp": "2026-06-18T21:47:48"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000164",
+      "phone_number": "+39545464988",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 1,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000163",
+      "phone_number": "+39446307019",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 1,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000162",
+      "phone_number": "+39525551374",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000161",
+      "phone_number": "+39898526529",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000160",
+      "phone_number": "+39434723864",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 1,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000159",
+      "phone_number": "+39162113873",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000158",
+      "phone_number": "+39393845687",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000157",
+      "phone_number": "+39769398703",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000156",
+      "phone_number": "+39925033931",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000155",
+      "phone_number": "+39752270565",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 1,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000154",
+      "phone_number": "+39697767889",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000153",
+      "phone_number": "+39302978683",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000152",
+      "phone_number": "+39450349973",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000151",
+      "phone_number": "+39336590624",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000150",
+      "phone_number": "+39535552568",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000149",
+      "phone_number": "+39425150007",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-italy-EVT-1781819267-000000148",
+      "phone_number": "+39390957304",
+      "from_country_code": "IT",
+      "datacenter": "dc-italy",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-sweden-EVT-1781819267-000000165",
+      "phone_number": "+46627323424",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
+      "song_id": 3,
+      "timestamp": "2026-06-18T21:47:47"
+    },
+    {
+      "event_id": "dc-sweden-EVT-1781819267-000000164",
+      "phone_number": "+46632533895",
+      "from_country_code": "SE",
+      "datacenter": "dc-sweden",
+      "song_id": 2,
+      "timestamp": "2026-06-18T21:47:47"
     }
   ],
   "test_control": {
